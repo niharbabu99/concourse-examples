@@ -13,4 +13,4 @@ params:
 inputs:
 - name: ci-pipeline-git
 run:
-  path: ci-pipeline-git/load-bosh-vars-example/bin/load-bosh-vars.sh
+  path: ci-pipeline-git/load-bosh-vars-example/bin/execute-script.sh
