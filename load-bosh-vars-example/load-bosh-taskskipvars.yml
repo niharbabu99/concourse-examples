@@ -1,0 +1,22 @@
+---
+resources:
+- name: ci-pipeline-git
+  type: git
+  source:
+    uri: https://github.com/niharbabu99/concourse-examples.git
+    branch: master
+
+jobs:
+- name: bosh-load-test
+  serial: true
+  plan:
+  - get: ci-pipeline-git
+  - task: check-load
+    params:
+       target: ((director_address))
+       client: ((bosh_client))
+       client_secret: ((bosh_client_pwd))
+       ca_cert: ((bosh_ca_cert))
+#       jumpbox_url: ((jumpbox_url))
+#       jumpbox_ssh_key: ((jumpbox_key))
+    file: ci-pipeline-git/load-bosh-vars-example/tasks/load-bosh-vars-task.yml
