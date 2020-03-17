@@ -19,4 +19,4 @@ jobs:
        ca_cert: ((bosh_ca_cert))
        jumpbox_url: ((jumpbox_url))
        jumpbox_ssh_key: ((jumpbox_key))
-    file: ci-pipeline-git/tasks/load-bosh-vars-task.yml
+    file: ci-pipeline-git/load-bosh-vars-example/tasks/load-bosh-vars-task.yml

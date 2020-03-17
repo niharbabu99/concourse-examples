@@ -32,5 +32,5 @@ jobs:
        args:
        - -exec
        - |
-         source ci-pipeline-git/bin/load-bosh-vars.sh
+         source ci-pipeline-git/load-bosh-vars-example/bin/load-bosh-vars.sh
          bosh deployments
